@@ -6,7 +6,18 @@ namespace Day_16_Exceptions_String_To_Integer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string s = Console.ReadLine();
+
+            try
+            {
+                int x = int.Parse(Console.ReadLine());
+                Console.WriteLine(x);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Bad String");
+                throw;
+            }
         }
     }
 }
