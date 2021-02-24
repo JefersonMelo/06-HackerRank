@@ -4,6 +4,10 @@ namespace Day_18_Queues_And_Stacks
 {
     class Program
     {
+        /*
+        https://hackerrankweb.wordpress.com/2016/11/30/day-18-queues-and-stacks/
+
+         */
         static void Main(String[] args)
         {
             // read the string s.
