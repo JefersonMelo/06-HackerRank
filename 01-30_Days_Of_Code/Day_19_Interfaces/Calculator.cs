@@ -6,12 +6,21 @@ namespace Day_19_Interfaces
 {
     public class Calculator : AdvancedArithmetic
     {
+        public int soma;
+
+        public Calculator()
+        {
+            soma = 0;
+        }
+
         public int divisorSum(int n)
         {
-            int soma = 0;
-            for (int i = 0; i <= n; i++)
+            for (int i = n; i > 0; i--)
             {
-                soma = i + i;
+                if (n % i == 0)
+                {
+                    soma += i;
+                }
             }
             return soma;
         }
