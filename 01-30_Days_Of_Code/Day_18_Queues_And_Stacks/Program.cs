@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Day_18_Queues_And_Stacks
 {
@@ -6,6 +8,8 @@ namespace Day_18_Queues_And_Stacks
     {
         /*
         https://hackerrankweb.wordpress.com/2016/11/30/day-18-queues-and-stacks/
+        https://www.todamateria.com.br/palindromo/
+        https://www.hackerrank.com/rest/contests/master/challenges/30-queues-stacks/hackers/lukaszbednarz/download_solution
 
          */
         static void Main(String[] args)
