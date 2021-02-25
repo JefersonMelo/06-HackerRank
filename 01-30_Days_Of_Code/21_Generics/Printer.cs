@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Day_21_Generics
+﻿namespace Day_21_Generics
 {
-    public class Printer<T>
+    class Printer//<T>
     {
         /**
 	*    Name: PrintArray
@@ -12,13 +8,20 @@ namespace Day_21_Generics
 	*    @param A generic array
 	**/
         // Write your code here
-        public void PrintArray(T t)
+        public void PrintArray<T>(T[] array)
         {
-            foreach (var item in t.ToString())
+            foreach (T item in array)
             {
-                Console.WriteLine(item);
+                System.Console.WriteLine(item);
             }
         }
+        //public void PrintArray(T t)
+        //{
+        //    foreach (var item in t.ToString())
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //}
 
     }
 }
