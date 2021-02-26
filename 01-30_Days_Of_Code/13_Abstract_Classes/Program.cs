@@ -4,9 +4,14 @@ namespace Day_13_Abstract_Classes
 {
     class Program
     {
-        static void Main( string[] args )
+        
+        static void Main(String[] args)
         {
-            Console.WriteLine("Hello World!");
+            String title = Console.ReadLine();
+            String author = Console.ReadLine();
+            int price = Int32.Parse(Console.ReadLine());
+            Book new_novel = new MyBook(title, author, price);
+            new_novel.display();
         }
     }
 }
