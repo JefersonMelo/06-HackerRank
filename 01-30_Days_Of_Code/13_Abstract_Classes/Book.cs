@@ -9,10 +9,6 @@ namespace Day_13_Abstract_Classes
         protected String title;
         protected String author;
 
-        public Book()
-        {
-        }
-
         public Book(String t, String a)
         {
             title = t;
