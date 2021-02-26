@@ -19,12 +19,12 @@ namespace Day_24_More_Linked_Lists
             next = null;
         }
 
-        public static Node removeDuplicates(Node head)
+        public Node removeDuplicates(Node head)
         {
             //Write your code here
         }
 
-        public static Node insert(Node head, int data)
+        public Node insert(Node head, int data)
         {
             Node p = new Node(data);
 
@@ -43,7 +43,7 @@ namespace Day_24_More_Linked_Lists
             }
             return head;
         }
-        public static void display(Node head)
+        public void display(Node head)
         {
             Node start = head;
             while (start != null)
