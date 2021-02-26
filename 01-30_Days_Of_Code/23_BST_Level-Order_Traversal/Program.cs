@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace Day_23_BST_Level_Order_Traversal
 {
@@ -23,9 +19,9 @@ namespace Day_23_BST_Level_Order_Traversal
             while (T-- > 0)
             {
                 int data = Int32.Parse(Console.ReadLine());
-                root = node.insert(root, data);
+                root = node.Insert(root, data);
             }
-            node.levelOrder(root);
+            node.LevelOrder(root);
 
         }
     }

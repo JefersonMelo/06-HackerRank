@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace Day_23_BST_Level_Order_Traversal
 {
@@ -18,7 +15,7 @@ namespace Day_23_BST_Level_Order_Traversal
             this.data = data;
             left = right = null;
         }
-        public void levelOrder(Node root)
+        public void LevelOrder(Node root)
         {
             //Write your code here
             List<Node> node = new List<Node>();
@@ -42,7 +39,7 @@ namespace Day_23_BST_Level_Order_Traversal
             Console.WriteLine(string.Join(" ", nodeString.ToArray()));
         }
 
-        public Node insert(Node root, int data)
+        public Node Insert(Node root, int data)
         {
             if (root == null)
             {
@@ -53,12 +50,12 @@ namespace Day_23_BST_Level_Order_Traversal
                 Node cur;
                 if (data <= root.data)
                 {
-                    cur = insert(root.left, data);
+                    cur = Insert(root.left, data);
                     root.left = cur;
                 }
                 else
                 {
-                    cur = insert(root.right, data);
+                    cur = Insert(root.right, data);
                     root.right = cur;
                 }
                 return root;
