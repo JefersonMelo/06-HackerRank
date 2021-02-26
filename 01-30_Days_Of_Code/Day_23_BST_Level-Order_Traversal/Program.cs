@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Day_23_BST_Level_Order_Traversal
 {
@@ -6,6 +10,9 @@ namespace Day_23_BST_Level_Order_Traversal
     {
         /*
          * https://www.hackerrank.com/challenges/30-binary-trees/tutorial
+         * https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.queue-1?view=net-5.0
+         * https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.linkedlist-1?view=net-5.0
+         * https://docs.microsoft.com/pt-br/dotnet/api/system.string.join?view=net-5.0
          */
         static Node node = new Node();
 
