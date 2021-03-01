@@ -22,6 +22,14 @@ namespace Day_24_More_Linked_Lists
         public Node removeDuplicates(Node head)
         {
             //Write your code here
+            for (Node node = head; node != null; node = node.next)
+            {
+                while (node.next != null && node.data == node.next.data)
+                {
+                    node.next = node.next.next;
+                }
+            }
+            return head;
         }
 
         public Node insert(Node head, int data)
