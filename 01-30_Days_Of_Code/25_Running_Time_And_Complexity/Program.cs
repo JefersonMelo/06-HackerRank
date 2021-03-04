@@ -4,31 +4,35 @@ namespace Day_25_Running_Time_And_Complexity
 {
     class Program
     {
-        static void Main(string[] args)
+        /*
+         * https://www.hackerrank.com/rest/contests/master/challenges/30-running-time-and-complexity/hackers/Rodnog/download_solution
+         */
+        static void Main(String[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int x;
-            bool primo;
-            for (int i = 0; i <= n; i++)
+            int count = int.Parse(Console.ReadLine());
+            int[] input = new int[count];
+            for ( int i = 0; i < count; i++ )
             {
-                x = int.Parse(Console.ReadLine());
-                primo = true;
-                for (int j = 2; j * j < x; j++)
+                input[i] = int.Parse(Console.ReadLine());
+            }
+            foreach ( int number in input )
+            {
+                if ( number == 1 )
                 {
-                    if (x % j == 0)
+                    Console.WriteLine("Not prime");
+                    continue;
+                }
+                bool isPrime = true;
+                for ( int i = 2; i <= ( int )Math.Sqrt(number); i++ )
+                {
+                    if ( number % i == 0 )
                     {
-                        primo = false;
+                        isPrime = false;
                         break;
                     }
                 }
-                if (primo && x != 1)
-                {
-                    Console.WriteLine("Prime");
-                }
-                else
-                {
-                    Console.WriteLine("Not prime");
-                }
+
+                Console.WriteLine(isPrime ? "Prime" : "Not prime");
             }
         }
     }
