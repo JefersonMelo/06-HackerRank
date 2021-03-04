@@ -1,16 +1,5 @@
-﻿using System.CodeDom.Compiler;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
-using System;
 
 namespace Day_28_RegEx_Patterns_And_Intro_To_Databases
 {
@@ -18,10 +7,14 @@ namespace Day_28_RegEx_Patterns_And_Intro_To_Databases
     {
         /*
         https://www.hackerrank.com/challenges/30-regex-patterns/tutorial
+        https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1?view=net-5.0
+        https://docs.microsoft.com/pt-br/dotnet/api/system.collections.arraylist?view=net-5.0
+        https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1.sort?view=net-5.0#System_Collections_Generic_List_1_Sort
          */
         static void Main(string[] args)
         {
             int N = Convert.ToInt32(Console.ReadLine());
+            List<string> list = new List<string>();
 
             for ( int NItr = 0; NItr < N; NItr++ )
             {
@@ -30,6 +23,16 @@ namespace Day_28_RegEx_Patterns_And_Intro_To_Databases
                 string firstName = firstNameEmailID[0];
 
                 string emailID = firstNameEmailID[1];
+
+                if ( emailID.Contains("@gmail.com") )
+                {
+                    list.Add(firstName);
+                }
+            }
+            list.Sort();
+            foreach ( var item in list )
+            {
+                Console.WriteLine(item);
             }
         }
     }
